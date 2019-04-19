@@ -1,16 +1,19 @@
 div.greeting {
     width: 100vw;
+    height: 100vh;
     position: relative;
+    z-index: 1;
 }
 
 div.banner {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 38%;
-    height: 950px;
+    width: 550px;
+    height: 100vh;
+    min-height: 760px;
     background: white;
-    clip-path: polygon(0 0, 67% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 400px 0, 100% 100%, 0% 100%);
 
     font-family: 'Nunito', sans-serif;
     display: flex;
@@ -19,9 +22,9 @@ div.banner {
 }
 
 div.banner-content {
-    width: 50%;
-    margin: 0 35% 0 15%;
-    padding-bottom: 70px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 30% 20px 50px;
 
     h3{
         margin: 0px 0;
@@ -33,15 +36,24 @@ div.banner-content {
     }
 }
 
-span.saying {
+div.saying-wrapper{
+    height: 100vh;
+    min-height: 760px;
+    width: calc(100vw - 385px);
     position: absolute;
-    right: 380px;
-    top: 300px;
+    right: 0px;
+    pointer-events: none;
+    display: flex;
+}
+
+span.saying {
+    margin: 0 auto;
+    margin-top: 30vh;
+    padding: 0 165px 0 165px;
     color: white;
     font-weight: 500;
     z-index: 1;
     font-family: 'Passion One', cursive;
-    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
     font-size: 90px;
     text-transform: uppercase;
 }
@@ -49,7 +61,10 @@ span.saying {
 
 
 img.img-serious {
-    height: 950px;
+    height: 100vh;
+    min-height: 760px;
+    width: calc(100vw - 385px);
+    object-fit: cover;
     position: absolute;
     right: 0px;
     z-index: -1;
@@ -62,7 +77,10 @@ img.img-serious {
 }
 
 img.img-funny {
-    height: 950px;
+    height: 100vh;
+    min-height: 760px;
+    width: calc(100vw - 385px);
+    object-fit: cover;
     position: absolute;
     right: 0px;
     z-index: -2;
