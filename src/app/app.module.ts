@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { GreetingComponent } from './greeting/greeting.component';
 import { AboutComponent } from './about/about.component';
+import { HoverLinkComponent } from './hover-link/hover-link.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GreetingComponent,
     AboutComponent,
+    HoverLinkComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-app' }),
