@@ -1,0 +1,32 @@
+div.close {
+    a {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 800;
+        font-size: 36px;
+        margin: 16px;
+		color: black;
+		text-decoration: none;
+    }
+}
+
+h2 {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+div.projects-wrapper {
+    margin: 16px;
+    width: calc(100vw - 32px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.project {
+    width: 300px;
+}

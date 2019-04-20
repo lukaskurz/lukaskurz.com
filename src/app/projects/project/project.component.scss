@@ -1,0 +1,30 @@
+div.project-wrapper{
+	width: 100%;
+	height: 100%;
+	margin: 8px;
+
+	img{
+		object-fit: contain;
+		height: 50%;
+		width: 100%;
+	}
+
+	h1{
+		text-align: center;
+		font-family: 'Nunito', sans-serif;
+		color: black;
+
+		a{
+			color: black;
+		}
+	}
+
+	h3{
+		text-align: center;
+		font-family: 'Nunito', sans-serif;
+	}
+
+	span{
+		font-family: 'Nunito', sans-serif;
+	}
+}

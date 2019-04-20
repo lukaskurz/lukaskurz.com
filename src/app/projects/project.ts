@@ -4,4 +4,5 @@ export class Project {
     description: string;
     texts: string[];
     imageUrls: string[];
+    githubUrl: string;
 }
