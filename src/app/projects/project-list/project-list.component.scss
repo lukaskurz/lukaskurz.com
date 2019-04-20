@@ -4,19 +4,33 @@ div.close {
         font-weight: 800;
         font-size: 36px;
         margin: 16px;
-		color: black;
+		color: white;
 		text-decoration: none;
     }
+}
+
+div.background{
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: #f26522;
+    z-index: -1;
 }
 
 h2 {
     font-family: 'Nunito', sans-serif;
     text-align: center;
+    color: white;
 }
 
 p {
     font-family: 'Nunito', sans-serif;
     text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
 }
 
 div.projects-wrapper {
@@ -29,4 +43,5 @@ div.projects-wrapper {
 
 div.project {
     width: 300px;
+    margin: 8px;
 }

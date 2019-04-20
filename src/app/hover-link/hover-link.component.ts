@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hover-link',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hover-link.component.scss']
 })
 export class HoverLinkComponent implements OnInit {
+
+  @Input() color: 'red' | 'blue' |'green' = 'red';
+
 
   constructor() { }
 

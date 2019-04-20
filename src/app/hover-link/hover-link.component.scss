@@ -1,12 +1,40 @@
 $thick : 3px;
 $pad : 0.7em;
 $extra : calc(#{$pad} * 1.2);
-$color : #f26522;
+$red : #f26522;
+$green : #11a76d;
+$blue : #1471db;
+
+.portfolio-experiment.red {
+
+    a:after,
+    .line {
+        background: $red;
+    }
+}
+
+.portfolio-experiment.green {
+
+    a:after,
+    .line {
+        background: $green;
+    }
+}
+
+.portfolio-experiment.blue {
+
+    a:after,
+    .line {
+        background: $blue;
+    }
+}
+
 
 
 .portfolio-experiment {
     text-align: center;
-	margin: 5px 0;
+    margin: 5px 0;
+
     a {
         color: black;
         padding: $pad $extra;
@@ -33,7 +61,6 @@ $color : #f26522;
             left: $extra;
             right: $extra;
             height: $thick;
-            background: $color;
             // z-index: -1;
             transition:
                 transform 0.8s cubic-bezier(1, 0, .37, 1) 0.2s,
@@ -46,7 +73,6 @@ $color : #f26522;
 
     .line {
         position: absolute;
-        background: $color;
 
         &.-right,
         &.-left {
