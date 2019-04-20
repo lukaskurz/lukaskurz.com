@@ -21,7 +21,8 @@ import { HoverLinkComponent } from './hover-link/hover-link.component';
     RouterModule.forRoot([
       { path: '', redirectTo: 'greeting', pathMatch: 'full' },
       { path: 'greeting', component: GreetingComponent, data: {animation: 'greeting'} },
-      { path: 'about', component: AboutComponent, data: {animation: 'about'} }
+      { path: 'about', component: AboutComponent, data: {animation: 'about'} },
+      { path: 'projects', loadChildren: './projects/projects.module#ProjectsModule'}
     ]),
     TransferHttpCacheModule,
     BrowserAnimationsModule
