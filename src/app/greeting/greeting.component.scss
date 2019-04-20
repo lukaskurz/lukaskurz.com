@@ -1,0 +1,206 @@
+div.greeting {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+div.banner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 550px;
+    height: 100vh;
+    min-height: 760px;
+    background: white;
+    clip-path: polygon(0 0, 400px 0, 100% 100%, 0% 100%);
+
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+div.banner-content {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 30% 20px 50px;
+
+    h3 {
+        margin: 0px 0;
+    }
+
+    h1 {
+        margin: 0px 0;
+        font-size: 40px;
+    }
+}
+
+div.saying-wrapper {
+    height: 100vh;
+    min-height: 760px;
+    width: calc(100vw - 385px);
+    position: absolute;
+    right: 0px;
+    pointer-events: none;
+    display: flex;
+}
+
+span.saying {
+    margin: 0 auto;
+    margin-top: 30vh;
+    padding: 0 165px 0 165px;
+    color: white;
+    font-weight: 500;
+    z-index: 1;
+    font-family: 'Passion One', cursive;
+    font-size: 90px;
+    text-transform: uppercase;
+}
+
+img.img-serious {
+    height: 100vh;
+    min-height: 760px;
+    width: calc(100vw - 385px);
+    object-fit: cover;
+    position: absolute;
+    right: 0px;
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 250ms;
+
+    &:hover {
+        opacity: 0;
+    }
+}
+
+img.img-funny {
+    height: 100vh;
+    min-height: 760px;
+    width: calc(100vw - 385px);
+    object-fit: cover;
+    position: absolute;
+    right: 0px;
+    z-index: -2;
+}
+
+@media only screen and (max-width: 1200px) {
+    div.banner-content {
+        h1 {
+            font-size: 30px;
+        }
+
+        h2 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        h4 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 8px 0px;
+        }
+    }
+
+    span.saying {
+        padding: 0 50px 0 135px;
+        font-size: 70px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    span.saying {
+        margin-top: 15vh;
+        padding: 0 20px 0 105px;
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    div.greeting {
+        width: 100vw;
+        position: relative;
+    }
+
+    div.saying-wrapper {
+        position: absolute;
+        height: 70vh;
+        min-height: 300px;
+        width: 100vw;
+        right: 0px;
+        top: 0px;
+        pointer-events: none;
+        display: block;
+        text-align: center;
+    }
+
+    span.saying {
+        margin: 0 auto;
+        display: block;
+        margin-top: 10vh;
+        padding: 0;
+        color: white;
+        font-weight: 500;
+        z-index: 1;
+        font-family: 'Passion One', cursive;
+        font-size: 60px;
+        text-transform: uppercase;
+    }
+
+    img.img-serious {
+        position: static;
+        height: 70vh;
+        min-height: 300px;
+        width: 100vw;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 1;
+        transition: opacity 250ms;
+
+        &:hover {
+            opacity: 0;
+        }
+    }
+
+    img.img-funny {
+        position: absolute;
+        height: 70vh;
+        min-height: 300px;
+        width: 100vw;
+        object-fit: cover;
+        z-index: -2;
+    }
+
+    div.banner {
+        position: static;
+        height: auto;
+        min-height: auto;
+        width: 100vw;
+        background: white;
+        clip-path: none;
+
+        font-family: 'Nunito', sans-serif;
+        display: block;
+    }
+
+    div.banner-content {
+        box-sizing: border-box;
+        width: auto;
+        padding: 0;
+        margin: 20px;
+
+        h3 {
+            margin: 0px 0;
+        }
+
+        h1 {
+            margin: 0px 0;
+            font-size: 40px;
+        }
+    }
+}
+
+// @media only screen and (max-width: 600px) {}
