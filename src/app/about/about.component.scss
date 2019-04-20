@@ -1,7 +1,11 @@
 div.about {
     font-family: 'Nunito', sans-serif;
-
     margin: 16px;
+    min-height: calc(100vh - 32px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 h3,
