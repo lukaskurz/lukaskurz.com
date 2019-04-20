@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Project } from '../project';
+import { ProjectRepositoryService } from '../project-repository.service';
 
 @Component({
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
   styleUrls: ['./project-list.component.scss']
 })
-export class ProjectListComponent implements OnInit {
+export class ProjectListComponent  {
 
-  constructor() { }
+  projects: Project[];
 
-  ngOnInit() {
+  constructor(private rep: ProjectRepositoryService) {
+    this.projects = rep.projects;
   }
 
 }
