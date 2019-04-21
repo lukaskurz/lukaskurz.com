@@ -8,6 +8,8 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
 import { GreetingComponent } from './greeting/greeting.component';
 import { AboutComponent } from './about/about.component';
 import { HoverLinkComponent } from './hover-link/hover-link.component';
+import { SkillListComponent } from './skills/skill-list/skill-list.component';
+import { SocialButtonsComponent } from './about/social-buttons/social-buttons.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { HoverLinkComponent } from './hover-link/hover-link.component';
     GreetingComponent,
     AboutComponent,
     HoverLinkComponent,
+    SkillListComponent,
+    SocialButtonsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-app' }),
@@ -22,7 +26,8 @@ import { HoverLinkComponent } from './hover-link/hover-link.component';
       { path: '', redirectTo: 'greeting', pathMatch: 'full' },
       { path: 'greeting', component: GreetingComponent, data: {animation: 'greeting'} },
       { path: 'about', component: AboutComponent, data: {animation: 'about'} },
-      { path: 'projects', loadChildren: './projects/projects.module#ProjectsModule'}
+      { path: 'skills', component: SkillListComponent, data: {animation: 'skills'} },
+      { path: 'projects', loadChildren: './projects/projects.module#ProjectsModule', data: {animation: 'projects'} }
     ]),
     TransferHttpCacheModule,
     BrowserAnimationsModule
