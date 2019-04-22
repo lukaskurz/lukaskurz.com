@@ -1,11 +1,25 @@
 <div class="project-wrapper">
-  <img [src]="project.imageUrls[0]"/>
-  <h1><a [href]="project.githubUrl">{{project.title}}</a></h1>
-  <h3>{{project.description}}</h3>
-  <ng-container *ngFor="let t of project.technologies; let i = index">
-    <span *ngIf="i != project.technologies.length-1;else commaSep">{{t}}, </span>
-    <ng-template #commaSep>
-      <span>{{t}}</span>
-    </ng-template>
-  </ng-container>
+  <div class="header">
+    <h2>{{project.title}}</h2>
+    <h3>{{project.description}}</h3>
+    <h4>
+      Technologies in use are 
+      <ng-container *ngFor="let t of project.technologies;let i = index">
+        <ng-container *ngIf="project.technologies.length-1 != i; else lastTech">
+          {{t}}, 
+        </ng-container>
+        <ng-template #lastTech>
+          and {{t}}.
+        </ng-template>
+      </ng-container>
+    </h4>
+    <div class="img-wrapper">
+      <img [src]="project.imageUrls[0]">
+    </div>
+  </div>
+  <div class="footer">
+    <div class="link-wrapper">
+      <a [href]="project.githubUrl">View on Github</a>
+    </div>
+  </div>
 </div>

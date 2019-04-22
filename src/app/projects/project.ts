@@ -5,4 +5,5 @@ export class Project {
     texts: string[];
     imageUrls: string[];
     githubUrl: string;
+    color: string;
 }

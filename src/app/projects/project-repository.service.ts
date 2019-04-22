@@ -16,7 +16,8 @@ export class ProjectRepositoryService {
         technologies: ['Firebase', 'Angular', 'Nodejs', 'Typescript', 'Slack'],
         imageUrls: ['assets/projects/robot.png'],
         texts: ['Some text'],
-        githubUrl: 'https://github.com/lukaskurz/standroid'
+        githubUrl: 'https://github.com/lukaskurz/standroid',
+        color: '#fd905e'
       });
     }
   }

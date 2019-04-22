@@ -3,8 +3,4 @@
 <h2>Projects</h2>
 <p>Below is a list of projects that I have worked on in my free time or as a part of my education.</p>
 
-<div class="projects-wrapper">
-	<div class="project" *ngFor="let p of projects">
-		<app-project [project]="p"></app-project>
-	</div>
-</div>
+<app-project [project]="projects[0]"></app-project>
