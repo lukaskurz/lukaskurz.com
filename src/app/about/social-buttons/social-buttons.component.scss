@@ -22,16 +22,18 @@ $social-button-active-color: #fff;
 $social-button-transition-time: 0.3s;
 
 $social-button-colors: (
-  "mail": #0072c6,
+  "mail": #7da10e,
   "facebook": #3b5999,
   "linkedin": #0077b5,
   "github": #6e5494,
   "codepen": #212121,
-  "steam": #7da10e,
+  "steam": #0072c6,
   "snapchat":#eec900,
   "twitter": #55acee,
   "instagram": #e4405f,
-  "npmjs": #c12127
+  "npmjs": #c12127,
+  "reddit": #ff4500,
+  "youtube": #282828
 );
 
 .social-button {
@@ -56,18 +58,18 @@ $social-button-colors: (
     text-align: center;
   }
 
-  i,
-  svg {
+  ::ng-deep i,
+  ::ng-deepsvg {
     position: relative;
     z-index: 1;
     transition: $social-button-transition-time;
   }
 
-  i {
+  ::ng-deep i {
     font-size: $social-button-radius * $social-button-icon-size;
   }
 
-  svg {
+  ::ng-deep svg {
     height: percentage($social-button-icon-size);
     width: percentage($social-button-icon-size);
   }
