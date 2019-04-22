@@ -19,7 +19,7 @@ export class ProjectComponent implements OnInit {
     for (let i = 0; i < p.technologies.length - 1; i++) {
       s += `${p.technologies[i]}, `;
     }
-    s += `and ${p.technologies[p.technologies.length - 1]}`;
+    s += `and ${p.technologies[p.technologies.length - 1]}.`;
 
     return s;
   }

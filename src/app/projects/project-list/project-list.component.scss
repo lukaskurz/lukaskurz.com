@@ -33,18 +33,18 @@ p {
     color: black;
 }
 
-::ng-deep ::ng-deep .fab svg {
-    font-size: 40px;
-    opacity: 0.3;
-
-    &:hover {
-        opacity: 1;
-    }
-}
-
 div.container {
     width: 100vw;
     position: relative;
+
+    ::ng-deep ::ng-deep .fab svg {
+        font-size: 40px;
+        opacity: 0.3;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
 
     div.back {
         position: absolute;
