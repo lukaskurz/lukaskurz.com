@@ -4,25 +4,25 @@ div.close {
         font-weight: 800;
         font-size: 36px;
         margin: 16px;
-		color: white;
-		text-decoration: none;
+        color: black;
+        text-decoration: none;
     }
 }
 
-div.background{
+div.background {
     position: fixed;
     top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
-    
+
     z-index: -1;
 }
 
 h2 {
     font-family: 'Nunito', sans-serif;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 p {
@@ -30,18 +30,56 @@ p {
     text-align: center;
     font-weight: 400;
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
-div.projects-wrapper {
-    margin: 16px;
-    width: calc(100vw - 32px);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+::ng-deep ::ng-deep .fab svg {
+    font-size: 40px;
+    opacity: 0.3;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
-div.project {
-    width: 300px;
-    margin: 8px;
+div.container {
+    width: 100vw;
+    position: relative;
+
+    div.back {
+        position: absolute;
+        left: 0;
+        top: 300px;
+        z-index: 10;
+    }
+
+    div.next {
+        position: absolute;
+        right: 0;
+        top: 300px;
+        z-index: 10;
+    }
+
+    div.vertical-list {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        float: left;
+        overflow-x: scroll;
+        white-space: nowrap;
+        padding-bottom: 26px;
+
+        div.project-element {
+            margin: 30px 100px;
+            display: inline-block;
+            width: 400px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    div.container div.vertical-list div.project-element {
+        margin: 30px 50px;
+        width: 300px;
+    }
 }

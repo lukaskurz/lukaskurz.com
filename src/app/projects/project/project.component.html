@@ -1,25 +1,19 @@
-<div class="project-wrapper">
-  <div class="header">
-    <h2>{{project.title}}</h2>
-    <h3>{{project.description}}</h3>
-    <h4>
-      Technologies in use are 
-      <ng-container *ngFor="let t of project.technologies;let i = index">
-        <ng-container *ngIf="project.technologies.length-1 != i; else lastTech">
-          {{t}}, 
-        </ng-container>
-        <ng-template #lastTech>
-          and {{t}}.
-        </ng-template>
-      </ng-container>
-    </h4>
-    <div class="img-wrapper">
-      <img [src]="project.imageUrls[0]">
+<div class="position-helper">
+  <div class="project-wrapper">
+    <div class="header">
+      <h2>{{project.title}}</h2>
+      <h3>{{project.description}}</h3>
+      <h4>
+        {{getTechSentence(project)}}
+      </h4>
+      <div class="img-wrapper">
+        <img [src]="project.imageUrls[0]">
+      </div>
     </div>
-  </div>
-  <div class="footer">
-    <div class="link-wrapper">
-      <a [href]="project.githubUrl">View on Github</a>
+    <div class="footer">
+      <div class="link-wrapper">
+        <a [href]="project.githubUrl">View on Github</a>
+      </div>
     </div>
   </div>
 </div>

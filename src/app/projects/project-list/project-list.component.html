@@ -3,4 +3,16 @@
 <h2>Projects</h2>
 <p>Below is a list of projects that I have worked on in my free time or as a part of my education.</p>
 
-<app-project [project]="projects[0]"></app-project>
+<div class="container">
+	<div class="back">
+		<fa-icon class="fab" *ngIf="!isStart()" [icon]="faArrowLeft" (click)="scrollBack()"></fa-icon>
+	</div>
+	<div #verticalList id="verticalList" class="vertical-list" (scroll)="isStart()">
+		<div *ngFor="let p of projects" class="project-element">
+			<app-project [project]="p"></app-project>
+		</div>
+	</div>
+	<div class="next">
+		<fa-icon class="fab" *ngIf="!isEnd()" [icon]="faArrowRight" (click)="scrollNext()"></fa-icon>
+	</div>
+</div>

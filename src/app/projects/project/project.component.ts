@@ -14,4 +14,14 @@ export class ProjectComponent implements OnInit {
   ngOnInit() {
   }
 
+  getTechSentence(p: Project) {
+    let s = "Technologies in use are ";
+    for (let i = 0; i < p.technologies.length - 1; i++) {
+      s += `${p.technologies[i]}, `;
+    }
+    s += `and ${p.technologies[p.technologies.length - 1]}`;
+
+    return s;
+  }
+
 }
