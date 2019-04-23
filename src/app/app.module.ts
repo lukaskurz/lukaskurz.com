@@ -11,6 +11,7 @@ import { HoverLinkComponent } from './hover-link/hover-link.component';
 import { SkillListComponent } from './skills/skill-list/skill-list.component';
 import { SocialButtonsComponent } from './about/social-buttons/social-buttons.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HistoryComponent } from './history/history.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HoverLinkComponent,
     SkillListComponent,
     SocialButtonsComponent,
+    HistoryComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-app' }),
@@ -29,6 +31,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
       { path: 'greeting', component: GreetingComponent, data: { animation: 'greeting' } },
       { path: 'about', component: AboutComponent, data: { animation: 'about' } },
       { path: 'skills', component: SkillListComponent, data: { animation: 'skills' } },
+      { path: 'history', component: HistoryComponent, data: { animation: 'history' } },
       { path: 'projects', loadChildren: './projects/projects.module#ProjectsModule', data: { animation: 'projects' } }
     ]),
     TransferHttpCacheModule,
