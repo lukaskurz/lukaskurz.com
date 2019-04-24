@@ -54,6 +54,15 @@ export class ProjectRepositoryService {
       githubUrl: 'https://github.com/lukaskurz/lukaskurz.com',
       color: '#fd905e'
     });
+    this.projects.push({
+      title: 'Vikebot',
+      description: 'A competitive coding game',
+      technologies: ['Golang', 'Typescript', 'Phaser', 'Docker'],
+      imageUrls: ['assets/projects/vikebot.png'],
+      texts: ['Some text'],
+      githubUrl: 'https://github.com/vikebot',
+      color: '#fd905e'
+    });
   }
 }
 
