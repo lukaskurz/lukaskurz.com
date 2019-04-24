@@ -1,3 +1,12 @@
+# lukaskurz.com - My personal website
+
+![Drag Racing](src/assets/projects/lukaskurz.png)
+
+### Description
+
+This is my personal website, a static landing page.
+As you might notice, not only is this written in Angular, but it also uses Angular Universal. "Angular for a static landing page?" you might ask. And yes you are right, it's overkill. But I like Angular,  and I like overkill. Also, I wanted to try out Angular Universal.
+
 ### Build Time Pre-rendering vs. Server-side Rendering (SSR)
 This repo demonstrates the use of 2 different forms of Server-side Rendering.
 
