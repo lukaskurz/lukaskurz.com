@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Nunito:200|Passion+One');
 
+html {
+    scrollbar-width: none;
+}
+
 body {
     margin: 0;
     overflow-x: hidden;
