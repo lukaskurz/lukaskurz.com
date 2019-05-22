@@ -1,7 +1,8 @@
-import { Component, ViewChild, ViewRef, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, ViewRef, ElementRef, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
 import { Project } from '../project';
 import { ProjectRepositoryService } from '../project-repository.service';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class ProjectListComponent implements AfterViewInit {
 
   @ViewChild('verticalList') verticalList: ElementRef;
 
-  constructor(private rep: ProjectRepositoryService) {
+  constructor(private rep: ProjectRepositoryService, @Inject(PLATFORM_ID) private platformId: Object) {
     this.projects = rep.projects;
   }
 
@@ -27,28 +28,44 @@ export class ProjectListComponent implements AfterViewInit {
 
 
   getElementWidth() {
-    if (window.innerWidth > 600) {
-      return 600;
+    if (isPlatformBrowser(this.platformId)) {
+      if (window.innerWidth > 600) {
+        return 600;
+      } else {
+        return 400;
+      }
     } else {
-      return 400;
+      return 600;
     }
   }
 
   scrollNext() {
-    document.getElementById('verticalList').scrollBy({ left: this.getElementWidth(), behavior: 'smooth' });
+    if (isPlatformBrowser(this.platformId)) {
+      document.getElementById('verticalList').scrollBy({ left: this.getElementWidth(), behavior: 'smooth' });
+    }
   }
 
   scrollBack() {
-    document.getElementById('verticalList').scrollBy({ left: -this.getElementWidth(), behavior: 'smooth' });
+    if (isPlatformBrowser(this.platformId)) {
+      document.getElementById('verticalList').scrollBy({ left: -this.getElementWidth(), behavior: 'smooth' });
+    }
   }
 
   isStart() {
-    return document.getElementById('verticalList').scrollLeft === 0;
+    if (isPlatformBrowser(this.platformId)) {
+      return document.getElementById('verticalList').scrollLeft === 0;
+    } else {
+      return true;
+    }
   }
 
   isEnd() {
-    const doc = document.getElementById('verticalList');
-    return doc.scrollLeft + doc.clientWidth === doc.scrollWidth;
+    if (isPlatformBrowser(this.platformId)) {
+      const doc = document.getElementById('verticalList');
+      return doc.scrollLeft + doc.clientWidth === doc.scrollWidth;
+    } else {
+      return false;
+    }
   }
 
 }
