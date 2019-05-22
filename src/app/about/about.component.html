@@ -1,4 +1,9 @@
 <div class="about">
+  <div class="close">
+    <a [routerLink]="['/greeting']">
+      <fa-icon class="fab" [icon]="faArrowLeft"></fa-icon>
+    </a>
+  </div>
   <h4>I see you haven't had enough. Fine.</h4>
   <h3>So what is it, that you want to know about me?</h3>
   <app-hover-link [routerLink]="['/projects']" [color]="'red'">Projects</app-hover-link>
