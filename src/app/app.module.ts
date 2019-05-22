@@ -33,7 +33,7 @@ import { HistoryComponent } from './history/history.component';
       { path: 'skills', component: SkillListComponent, data: { animation: 'skills' } },
       { path: 'history', component: HistoryComponent, data: { animation: 'history' } },
       { path: 'projects', loadChildren: './projects/projects.module#ProjectsModule', data: { animation: 'projects' } }
-    ]),
+    ], {scrollPositionRestoration: 'enabled'}),
     TransferHttpCacheModule,
     BrowserAnimationsModule,
     FontAwesomeModule
